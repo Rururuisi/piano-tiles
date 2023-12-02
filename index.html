@@ -1,0 +1,139 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Piano Tiles</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="clickEffect.css" />
+  </head>
+  <body>
+    <main>
+      <!-- Header Part -->
+      <header>
+        <h1>Piano Tiles</h1>
+
+        <!-- Timer and Hit Count -->
+        <div class="count_box">
+          Hit: <span id="hit">0</span> <span id="timer">60.0</span> sec
+        </div>
+
+        <!-- Hint Buttons -->
+        <button class="btn" id="hintBtn">Hint</button>
+
+        <!-- Restart Button -->
+        <span class="btn" id="restartBtn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="35"
+            height="35"
+            fill="white"
+            class="bi bi-arrow-counterclockwise"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z"
+            />
+            <path
+              d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z"
+            />
+          </svg>
+        </span>
+
+        <!-- Pause Button -->
+        <span class="btn" id="pauseBtn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            fill="white"
+            class="bi bi-pause-circle"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+            />
+            <path
+              d="M5 6.25a1.25 1.25 0 1 1 2.5 0v3.5a1.25 1.25 0 1 1-2.5 0v-3.5zm3.5 0a1.25 1.25 0 1 1 2.5 0v3.5a1.25 1.25 0 1 1-2.5 0v-3.5z"
+            />
+          </svg>
+        </span>
+      </header>
+
+      <!-- Game Playing Area -->
+      <div class="area" id="game_box">
+        <div class="grid" id="grid-0-0"></div>
+        <div class="grid" id="grid-0-1"></div>
+        <div class="grid" id="grid-0-2"></div>
+        <div class="grid" id="grid-0-3"></div>
+        <div class="grid" id="grid-1-0"></div>
+        <div class="grid" id="grid-1-1"></div>
+        <div class="grid" id="grid-1-2"></div>
+        <div class="grid" id="grid-1-3"></div>
+        <div class="grid" id="grid-2-0"></div>
+        <div class="grid" id="grid-2-1"></div>
+        <div class="grid" id="grid-2-2"></div>
+        <div class="grid" id="grid-2-3"></div>
+        <div class="grid" id="grid-3-0"></div>
+        <div class="grid" id="grid-3-1"></div>
+        <div class="grid" id="grid-3-2"></div>
+        <div class="grid" id="grid-3-3"></div>
+        <div id="click_area"></div>
+      </div>
+
+      <!-- Game Operate Keys -->
+      <div class="keys">
+        <div>W</div>
+        <div>D</div>
+        <div>K</div>
+        <div>O</div>
+      </div>
+    </main>
+
+    <!-- Hint Popup-->
+    <div id="hintBackground">
+      <div id="hintContent">
+        <span id="hintClose" class="close">&times;</span>
+        <p><b>Computer:</b> keyboard or click.</p>
+        <p><b>Phone:</b> finger touch.</p>
+        <br />
+        Hit the black tile on the bottom row to start the game! You
+        <b>CANNOT</b> hit the white tiles, otherwise you lose!<br /><br />
+        <b style="color: red;">
+          Hit as many as the black tiles you can in 60 seconds!
+        </b>
+        <button id="hintCloseBtn" class="closeBtn">Start to Play</button>
+      </div>
+    </div>
+
+    <!-- Game Over Popup -->
+    <div id="gameover">
+      <div id="gameoverContent">
+        <span id="gameoverClose" class="close">&times;</span>
+        <h1>Score</h1>
+        <p><b>Time:</b> <span id="gameTime">0.0</span> seconds</p>
+        <p><b>Total Hits:</b> <span id="gameHits">0</span> hits</p>
+        <button id="gameoverRestartBtn" class="closeBtn">Restart</button>
+      </div>
+    </div>
+
+    <!-- Pause Popup -->
+    <div id="pauseBackground">
+      <div id="pauseContent">
+        <h1>Game Paused!</h1>
+        <button id="resumeBtn" class="closeBtn">Resume</button>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <script src="game.js"></script>
+    <script src="clickEffect.js"></script>
+  </body>
+</html>

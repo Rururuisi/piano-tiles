@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  padding: 30px;
+  padding-bottom: 60px;
+  text-align: center;
+  background-image: linear-gradient(
+    #0c0120,
+    #251050,
+    #3d216b,
+    #251050,
+    #0c0120
+  );
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+/* -----------------------header------------------------ */
+
+header {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+header h1 {
+  margin: 0 0 20px 0;
+  color: white;
+}
+
+/* Count Box Elements */
+
+.count_box {
+  padding-left: 20px;
+  color: yellow;
+  font-size: 20px;
+  text-align: left;
+}
+
+#hit {
+  margin-right: 60px;
+}
+
+/* -----------------------Game Playing Box------------------------ */
+
+#game_box {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px auto;
+  margin-bottom: 10px;
+  max-width: 400px;
+  height: 70vh;
+  background-color: rgb(155, 162, 255);
+  border: 6px solid #000;
+  border-right: 4px solid #000;
+  border-bottom: 4px solid #000;
+  box-shadow: 0px 0px 30px rgb(96, 48, 173);
+}
+
+.grid {
+  width: 25%;
+  height: 25%;
+  background-color: white;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+#click_area {
+  position: absolute;
+  bottom: 25%;
+  width: 100%;
+  border-bottom: 8px groove #200041;
+}
+
+/* -----------------------keys hint------------------------ */
+
+.keys {
+  display: flex;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.keys div {
+  width: 25%;
+  color: yellow;
+  text-align: center;
+}
+
+/* -----------------------Popup------------------------ */
+
+/* =========Hint======== */
+#hintBtn {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  width: 60px;
+  height: 25px;
+  font-size: 16px;
+  color: black;
+  border: none;
+  border-radius: 18px;
+}
+
+#hintBtn:hover {
+  cursor: pointer;
+}
+
+#hintBackground {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+#hintContent {
+  position: absolute;
+  top: 150px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 40px 20px;
+  padding-bottom: 100px;
+  max-width: 300px;
+  font-size: 18px;
+  text-align: left;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+
+/* =========Game Over======== */
+
+#gameover {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+#gameoverContent {
+  position: absolute;
+  top: 150px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 30px 20px;
+  padding-bottom: 100px;
+  max-width: 300px;
+  font-size: 18px;
+  text-align: left;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+
+#gameoverContent h1 {
+  text-align: center;
+  margin: 20px;
+}
+
+#gameoverContent p {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+#gameoverContent p span {
+  margin-left: 20px;
+  color: rgb(202, 1, 1);
+}
+
+/* ========="X" Close Button======== */
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 5px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.close:hover {
+  cursor: pointer;
+  background-color: #ddd;
+}
+
+/* =========Close Button that inside the Popup Content======== */
+
+.closeBtn {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 5px 20px;
+  width: fit-content;
+  text-align: center;
+  font-size: 18px;
+  line-height: 30px;
+  cursor: pointer;
+  color: black;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 0 5px rgb(156, 156, 156);
+}
+
+.closeBtn:hover {
+  background-color: rgb(207, 207, 207);
+}
+
+/* =========Button Hover======== */
+
+.btn {
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: scale(1.2);
+}
+
+/* =========Restart button======== */
+
+#restartBtn {
+  position: absolute;
+  top: -10;
+  right: 40;
+}
+
+/* =========Pause======== */
+
+#pauseBtn {
+  position: absolute;
+  top: -8;
+  right: 0;
+}
+
+#pauseBackground {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+#pauseContent {
+  position: absolute;
+  top: 150px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 30px 20px;
+  padding-bottom: 100px;
+  max-width: 300px;
+  font-size: 18px;
+  text-align: left;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+
+#pauseContent h1 {
+  text-align: center;
+  margin-top: 30px;
+}
