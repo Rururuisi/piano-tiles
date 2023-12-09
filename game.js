@@ -1,5 +1,6 @@
 // key press events
 $(document).keydown(function (event) {
+    if (disabledGame > 0) return;
     switch (event.keyCode) {
         case 87: //W
             if (board[3][0] === 1 && timer[0] > 0) {
@@ -123,6 +124,7 @@ function isGameOver(col = -1) {
     if (timer[0] > 0) {
         $(`#grid-3-${col}`).css("backgroundColor", "red");
     }
+    disabledGame = 1;
     clearTimeout(timeout);
     $("#gameTime").text(timer[1].toFixed(1).toString());
     $("#gameHits").text(hit.toString());
